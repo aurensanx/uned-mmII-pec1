@@ -1,0 +1,109 @@
+\textbf{E3.} (3 puntos)
+
+
+\vspace{20px}
+\textit{Solución:}
+\\
+
+\begin{enumerate}
+[label=\alph*)]
+    \item Sea la esfera A aquella conectada a la batería.
+
+    En la situación descrita, las esferas se tocan tangencialmente, por lo que comparten el mismo potencial, que es a su vez el potencial $V_0$ suministrado por la batería.
+
+    \begin{equation*}
+        V_A = V_B = V_0
+    \end{equation*}
+
+    Conociendo los valores del potencial de las esferas, podemos calcular la carga de cada esfera utilizando los coeficientes de capacidad e influencia dados:
+
+
+    \begin{equation*}
+        Q_A = c_{AA}  V_A + c_{AB} V_B = c_{AA}  V_0 + c_{AB} V_0 = (c_{AA} + c_{AB}) V_0
+    \end{equation*}
+    \begin{equation*}
+        Q_B = c_{BA}  V_A + c_{BB} V_B = c_{AB}  V_0 + c_{AA} V_0 = (c_{AA} + c_{AB}) V_0
+    \end{equation*}
+
+    Las cargas $Q_A$ y $Q_B$ son iguales. Operando:
+
+    \begin{equation*}
+        Q_A = Q_B = \pi \varepsilon_0 a \Bigl( \ln(\frac{a}{s}) + 2 \gamma + 4 \ln2 \Bigr)  V_0 - \pi \varepsilon_0 a \Bigl( \ln(\frac{a}{s}) + 2 \gamma \Bigr)   V_0 =
+        4 \ln2\;\pi \varepsilon_0 a V_0
+    \end{equation*}
+
+    La capacidad del sistema se calcula como el cociente entre la carga total del sistema y su potencial.
+
+    \begin{equation*}
+        C = \frac{Q_A + Q_B}{V_0} = 8 \ln2\;\pi \varepsilon_0 a
+    \end{equation*}
+
+    \vspace{20px}
+    \item En esta situación, el potencial de la esfera A es de nuevo $V_0$ por seguir estando conectada a la batería.
+
+    La carga de la esfera B también permanece constante, porque
+    está aislada de cualquier conexión que pueda aportar o extraer carga;
+    $Q_B =  4 \ln2\;\pi \varepsilon_0 a V_0  \simeq  2,77 \pi \varepsilon_0 a V_0$.
+
+    El potencial en la esfera B y la carga de la esfera A sí que cambian respecto a la situación del apartado a).
+
+    Podemos calcular el potencial en la esfera B a partir de la ecuación:
+
+    \begin{equation*}
+        V_B = \frac{Q_B - c_{AB} V_A}{c_{BB}} =
+        \frac{\ln2 + \Bigl( \frac{1}{4} + (\frac{1}{4})^3 + \ldots \Bigr)}{ \Bigl( 1 + (\frac{1}{4})^2 + \ldots \Bigr)} V_0
+    \end{equation*}
+
+    Utilizando nuestro conocimiento de series geométricas, la serie del denominador equivale a 16 / 15, y la del numerador es
+    la misma extrayendo factor común 1/4, así que el resultado final para el potencial de la esfera B es:
+
+    \begin{equation*}
+        V_B = \frac{15 \ln2 + 4}{16} V_0 \simeq 0,90 V_0
+    \end{equation*}
+
+    Esta disminución del potencial en la esfera B puede explicarse dándonos cuenta de que la esfera B se ha alejado de la esfera A, y la carga de la esfera A
+    contribuye en menor medida al potencial $V_B$ respecto a su contribución en el apartado a).
+
+
+    La carga de la esfera A se puede calcular a partir del valor de los potenciales en las esferas y de los nuevos coeficientes de capacidad e influencia:
+
+    \begin{equation*}
+        Q_A = c_{AA} V_A + c_{AB} V_B = 4 \pi \varepsilon_0 a V_0 \Bigl(
+        \frac{16}{15} - \frac{4}{15}\frac{15 \ln2 + 4}{16}
+        \Bigr) =
+        \Bigl( 1 - \frac{\ln2}{4} \Bigr) 4 \pi \varepsilon_0 a V_0 \simeq 3,31 \pi \varepsilon_0 a V_0
+    \end{equation*}
+
+    Este aumento en $Q_A$ respecto al apartado a) puede explicarse al notar que la esfera B contribuye menos al potencial $V_A$ al estar más alejada;
+    por ello la esfera A necesita más carga para mantener el mismo potencial $V_0$.
+
+
+
+    \vspace{20px}
+    \item En esta nueva situación, el potencial de la esfera A es 0, al estar conectada a tierra.
+
+    Como en los apartados anteriores, la carga de la esfera B se mantiene constante; $Q_B =  4 \ln2\;\pi \varepsilon_0 a V_0$.
+
+    Calculamos el potencial $V_B$ de manera similar al apartado anterior:
+
+    \begin{equation*}
+        V_B = \frac{Q_B - c_{AB} V_A}{c_{BB}} =
+        \frac{\ 4 \ln2\;\pi \varepsilon_0 a V_0}{4 \pi \varepsilon_0 a \frac{16}{15}} =
+        \frac{15}{16}\ln2\;V_0 \simeq 0,65 V_0
+    \end{equation*}
+
+    De nuevo, esta disminución en $V_B$ se puede explicar porque la esfera A se ha descargado, y su contribución a $V_B$ ha disminuido.
+
+    La carga en la esfera A viene dada por la ecuación:
+
+    \begin{equation*}
+        Q_A = c_{AA} V_A + c_{AB} V_B =
+        - 4 \pi \varepsilon_0 a \frac{4}{15}   \frac{15}{16}\ln2\;V_0 =
+        - \ln2\; \pi \varepsilon_0 a V_0
+    \end{equation*}
+
+    Este resultado negativo de $Q_A$ tiene sentido físico porque la carga de la esfera B sigue aportando un potencial positivo a la esfera A;
+    para compensar ese valor y que el potencial final $V_A$ sea 0, la esfera A debe tener carga negativa.
+
+
+\end{enumerate}

@@ -29,4 +29,36 @@
         \mathbf{E}_A =  \mathbf{E}_B = \frac{\rho_0 R}{3 \varepsilon_0} (\mathbf{u}_x + \mathbf{u}_y )
     \end{equation*}
 
+
+    \vspace{20px}
+    \item awdfaef
+    
+    \begin{center}
+        \begin{tikzpicture}
+%    \draw[thin,gray!40] (-2,-2) grid (2,2);
+            \draw[<->] (-2.5,0)--(2.5,0) node[right]{$x$};
+            \draw[<->] (0,-2.5)--(0,2.5) node[above]{$y$};
+
+            \draw[dashed] (-2,2)--(2,2) node[above,xshift=-2.4cm] {$d$};
+            \draw[dashed] (-2,2)--(-2,-2) node[left,yshift=2.4cm] {$d$};;
+            \draw[dashed] (-2,-2)--(2,2);
+
+
+
+            \draw (-2,2) circle (6pt) node[above left=6pt]{$\boldsymbol{1}$};
+            \draw (-2,2) pic[rotate = 0] {cross=4pt};
+
+            \draw (2,2) circle (6pt) node[above right=6pt]{$\boldsymbol{2}$};
+            \filldraw (2,2) circle (3pt);
+
+            \draw (-2,-2) circle (6pt) node[below left=6pt]{$\boldsymbol{3}$};
+            \filldraw (-2,-2) circle (3pt);
+
+
+            \draw[line width=2pt,red,-stealth](0,0)--(-1,-1) node[anchor=east]{$\boldsymbol{\vec{B_1}}$};
+            \draw[line width=2pt,blue,-stealth](0,0)--(0.5,-0.5) node[anchor=west]{$\boldsymbol{\vec{B_2}}$};
+            \draw[line width=2pt,blue,-stealth](0,0)--(-0.5,0.5) node[anchor=south]{$\boldsymbol{\vec{B_3}}$};
+        \end{tikzpicture}
+    \end{center}
+
 \end{enumerate}
