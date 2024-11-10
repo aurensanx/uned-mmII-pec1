@@ -1,0 +1,68 @@
+\ProvidesPackage{IfbaListas}
+\usepackage[spanish]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[top=2cm,left=1.5cm,right=1.5cm,bottom=2cm]{geometry}%margens
+\usepackage{url}
+\usepackage{xcolor}
+\definecolor{links}{HTML}{427562}
+\usepackage[colorlinks=true,urlcolor=links,citecolor=red,linkcolor=blue,bookmarks=true]{hyperref}%Links e citações
+\usepackage{cancel} %para utilizar os comandos \cancel{} e \cancelto{}{}
+\usepackage{graphicx}
+\usepackage{amssymb,amsthm,amsmath,amsfonts}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{silence}
+\WarningsOff[everypage]% suprimir advertências relacionas ao pacote everypage
+%\usepackage{everypage}
+\usepackage[export]{adjustbox}
+\usepackage{lastpage}
+\usepackage{amsmath,amsthm,amssymb,amsfonts, color, graphicx}
+\usepackage{listings} % Mostrar código-fonte
+\usepackage{multicol,paralist}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{ifthen}
+\usepackage{etoolbox}%PARA UTILIZAR if para testar comando vazio
+%\usepackage{xwatermark}%marca d'agua
+\usepackage{qrcode}%gerar QR code
+\usepackage[sharp]{easylist}%listas personalizadas
+\usepackage[shortlabels]{enumitem} %personalizar amb. enumerate e itemize com [A]
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\usepackage{fancybox, graphicx}
+\usepackage{fancyhdr}
+\usepackage{wasysym}
+\usepackage{systeme}
+\usepackage{textcomp}
+\usepackage{parskip}
+\usepackage{tikz}
+\usepackage{gensymb}
+\usepackage{pgfplots}
+\cfoot{\thepage}
+\pgfplotsset{compat=1.16}
+
+%***************************************************
+\SolutionEmphasis{\color{red}}
+\usepackage{answers} % resposta no arquivo separado
+%\usepackage[nosolutionfiles]{answers} % resposta no lugar
+\renewcommand{\questionlabel}{\textbf{\thequestiontitle.}}
+\renewcommand{\figurename}{Figura}
+%******************************************************
+
+\newcolumntype{x}[1]{%
+        {\centering\hspace{0pt}}p{#1}}%
+
+\newcommand{\sen}{\operatorname{sen}}
+
+%====================================================================
+%DEFINÇÃO DE COMANDOS DE PARÊTESES, COLCHETES E CHAVES
+\newcommand{\pr}[1]{\ensuremath{\left[#1\right]}} %colchetes que acompanham o tamano da expressão matemática
+\newcommand{\pc}[1]{\ensuremath{\left(#1\right)}} %idem anterior: parenteses curvos
+\newcommand{\chav}[1]{\ensuremath{\left\{#1\right\}}} %idem: chaves
+
+\everymath{\displaystyle}%para as formulas math ficar do msm tamanho do texto
+%======================================================================
+
+\setlist[itemize]{label=\rule[0.5ex]{0.6ex}{0.6ex}}

@@ -1,0 +1,84 @@
+\textbf{Q1.} (0,5 puntos)
+
+
+\vspace{20px}
+\textit{Solución:}
+\\
+
+Una de las propiedades más importantes del campo electrostático, así como de todos los campos conservativos,
+es que la integral de línea del campo entre dos puntos no depende del camino, o dicho de otro modo, la
+integral de un campo electrostático a lo largo de un camino cerrado es nula.
+
+\begin{equation*}
+    \oint_{C} \textbf{E} \cdot d\textbf{l} = 0
+\end{equation*}
+
+Por otro lado, sabemos por el Teorema de Stokes que la integral del rotacional de un campo vectorial \textbf{F}
+sobre una superficie abierta
+$S$ es igual a la integral del campo \textbf{F} a lo largo del camino $C$ que limita $S$.
+
+\begin{equation*}
+    \oint_{S} (\nabla \times \textbf{F}) \cdot d\textbf{s} = \oint_{C} \textbf{F} \cdot d\textbf{l}
+\end{equation*}
+
+Como esta relación se debe cumplir para cualquier camino $C$ que limite una superficie $S$, podemos concluir que, para que
+\textbf{F} sea un posible campo electrostático, su
+rotacional $\nabla \times \textbf{F}$ debe ser nulo.
+
+Aplicando la ecuación del rotacional en coordenadas esféricas e igualando el resultado a 0 obtendremos los valores de
+$A$, $B$ y $C$ que hacen que se cumpla esta condición.
+
+\renewcommand{\arraystretch}{1.2}
+
+\begin{align*}
+    \nabla \times \textbf{F}
+    =\; &
+    \frac{1}{r^2 \sen \theta}
+    \begin{vmatrix}
+        \mathbf{u}_{r}        & r\mathbf{u_{\theta}}       & (r\sen\theta)\mathbf{u_{\varphi}} \\
+        \partial / \partial r & \partial / \partial \theta & \partial / \partial \varphi       \\
+        F_r                   & r F_\theta                 & (r \sen\theta)F_\varphi           \\
+    \end{vmatrix}
+    \\[10pt]
+    =\; & \begin{vmatrix}
+              \mathbf{u}_{r}                      & r\mathbf{u_{\theta}}                 & (r\sen\theta)\mathbf{u_{\varphi}} \\
+              \partial / \partial r               & \partial / \partial \theta           & \partial / \partial \varphi       \\
+              \frac{1}{r^4}(A + B \sen^2{\theta}) & \frac{1}{r^3}C \sen\theta \cos\theta & 0                                 \\
+    \end{vmatrix}     \\[10pt]
+    =\; &   \frac{1}{r^2 \sen \theta} \Biggl[
+        - \frac{\partial}{\partial \varphi} \Bigl( \frac{1}{r^3} C \sen\theta \cos\theta \Bigr) \mathbf{u}_{r}
+        + \frac{\partial}{\partial \varphi} \Bigl( \frac{1}{r^4} (A + B \sen^2{\theta})  \Bigr) r\mathbf{u}_{\theta} \; +  \\[10pt]
+        & \biggl( \frac{\partial}{\partial r} \Bigl( \frac{1}{r^3} C \sen\theta \cos\theta   \Bigr)
+        -  \frac{\partial}{\partial \theta} \Bigl( \frac{1}{r^4} (A + B \sen^2{\theta})
+        \Bigr) \biggr) r \sen\theta \mathbf{u}_{\varphi}
+        \Biggr] \\[10pt]
+    =\; &  \frac{1}{r}
+    \Biggl[
+        \frac{\partial}{\partial r}
+        \Bigl( \frac{1}{r^3} C \sen\theta \cos\theta
+        \Bigr)
+        -
+        \frac{\partial}{\partial \theta}
+        \Bigl( \frac{1}{r^4} (A + B \sen^2{\theta})
+        \Bigr)
+        \Biggr] \mathbf{u}_{\varphi}\\[10pt]
+    =\; &  \frac{1}{r}
+    \Biggl[
+        \frac{(-3)}{r^4} C \sen\theta \cos\theta
+        -
+        \frac{1}{r^4} 2 B \sen\theta \cos\theta
+        \Biggr] \mathbf{u}_{\varphi}\\[10pt]
+    =\; &
+    \frac{(- \sen\theta \cos\theta)}{r^5} (3C + 2B)  \mathbf{u}_{\varphi}  = 0 \\[10pt]
+\end{align*}
+
+
+Tras este cálculo, llegamos a la conclusión de que para que el rotacional del campo \textbf{F} sea idénticamente 0,
+la constante $A$ puede tener cualquier valor,
+y las constantes $B$ y $C$ deben cumplir la relación $C = -2 B / 3$.
+
+
+
+
+
+
