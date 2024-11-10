@@ -40,10 +40,12 @@ $A$, $B$ y $C$ que hacen que se cumpla esta condición.
         F_r                   & r F_\theta                 & (r \sen\theta)F_\varphi           \\
     \end{vmatrix}
     \\[10pt]
-    =\; & \begin{vmatrix}
-              \mathbf{u}_{r}                      & r\mathbf{u_{\theta}}                 & (r\sen\theta)\mathbf{u_{\varphi}} \\
-              \partial / \partial r               & \partial / \partial \theta           & \partial / \partial \varphi       \\
-              \frac{1}{r^4}(A + B \sen^2{\theta}) & \frac{1}{r^3}C \sen\theta \cos\theta & 0                                 \\
+    =\; &
+    \frac{1}{r^2 \sen \theta}
+    \begin{vmatrix}
+        \mathbf{u}_{r}                      & r\mathbf{u_{\theta}}                 & (r\sen\theta)\mathbf{u_{\varphi}} \\
+        \partial / \partial r               & \partial / \partial \theta           & \partial / \partial \varphi       \\
+        \frac{1}{r^4}(A + B \sen^2{\theta}) & \frac{1}{r^3}C \sen\theta \cos\theta & 0                                 \\
     \end{vmatrix}     \\[10pt]
     =\; &   \frac{1}{r^2 \sen \theta} \Biggl[
         - \frac{\partial}{\partial \varphi} \Bigl( \frac{1}{r^3} C \sen\theta \cos\theta \Bigr) \mathbf{u}_{r}
