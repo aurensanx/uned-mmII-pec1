@@ -1,5 +1,13 @@
 \textbf{E1.} (2,5 puntos)
 
+\usetikzlibrary{calc,patterns,angles,quotes}
+
+\tikzset{
+    cross/.pic = {
+        \draw(-#1,0) -- (#1,0);
+        \draw(0,-#1) -- (0, #1);
+    }
+}
 
 \vspace{20px}
 \textit{Solución:}
@@ -26,39 +34,81 @@
     problema, podemos expresar los campos eléctricos en los puntos A y B en coordenadas cartesianas:
 
     \begin{equation*}
-        \mathbf{E}_A =  \mathbf{E}_B = \frac{\rho_0 R}{3 \varepsilon_0} (\mathbf{u}_x + \mathbf{u}_y )
+        \mathbf{E}_A =  \mathbf{E}_B = \frac{\rho_0 R}{3 \varepsilon_0} (\mathbf{u}_y + \mathbf{u}_z )
     \end{equation*}
 
 
     \vspace{20px}
-    \item awdfaef
-    
+    \item La dirección del campo en los puntos del segmento AB es la dirección del vector unitario $\frac{1}{\sqrt{2}}(\mathbf{u}_y + \mathbf{u}_z)$.
+    Esta es la misma dirección que la obtenida para el campo en los
+    puntos A y B en el apartado a).
+
+    Mostramos en la siguiente figura el campo para un punto cualquiera del segmento:
+
     \begin{center}
         \begin{tikzpicture}
-%    \draw[thin,gray!40] (-2,-2) grid (2,2);
-            \draw[<->] (-2.5,0)--(2.5,0) node[right]{$x$};
-            \draw[<->] (0,-2.5)--(0,2.5) node[above]{$y$};
+            \coordinate (orig1) at (0,0);
+            \coordinate (orig2) at (4,4);
+            \coordinate (point) at (1,3);
+            \coordinate (a1) at (1,0);
+            \coordinate (a2) at (0.25,0.75);
+            \coordinate (b1) at (3,3.75);
+            \coordinate (b2) at (1,4);
 
-            \draw[dashed] (-2,2)--(2,2) node[above,xshift=-2.4cm] {$d$};
-            \draw[dashed] (-2,2)--(-2,-2) node[left,yshift=2.4cm] {$d$};;
-            \draw[dashed] (-2,-2)--(2,2);
+            \draw[->] (orig1) -- (5,0) node[right]{$Y$};
+            \draw[->] (orig1) -- (0,5) node[above]{$Z$};
 
+            \draw[dashed] (0,4)--(4,0);
 
-
-            \draw (-2,2) circle (6pt) node[above left=6pt]{$\boldsymbol{1}$};
-            \draw (-2,2) pic[rotate = 0] {cross=4pt};
-
-            \draw (2,2) circle (6pt) node[above right=6pt]{$\boldsymbol{2}$};
-            \filldraw (2,2) circle (3pt);
-
-            \draw (-2,-2) circle (6pt) node[below left=6pt]{$\boldsymbol{3}$};
-            \filldraw (-2,-2) circle (3pt);
+            \draw (orig1) circle (0pt) node[above left]{O};
+            \draw (orig2) pic {cross=4pt};
+            \draw (orig2) circle (0pt) node[above right]{O$^\prime$};
 
 
-            \draw[line width=2pt,red,-stealth](0,0)--(-1,-1) node[anchor=east]{$\boldsymbol{\vec{B_1}}$};
-            \draw[line width=2pt,blue,-stealth](0,0)--(0.5,-0.5) node[anchor=west]{$\boldsymbol{\vec{B_2}}$};
-            \draw[line width=2pt,blue,-stealth](0,0)--(-0.5,0.5) node[anchor=south]{$\boldsymbol{\vec{B_3}}$};
+            \draw[line width=2pt,blue,-stealth](orig1)--(1,3) node[below left=4pt]{$\mathbf{E}_A$};
+            \draw[line width=2pt,red,-stealth](1,3)--(orig2) node[left=16pt]{$\mathbf{E}_B$};
+            \draw[line width=1pt,blue!45,-stealth](0, 0)--(0,3) node[anchor=south];
+            \draw[line width=1pt,blue!45,-stealth](0, 0)--(1,0) node[anchor=south];
+            \draw[line width=1pt,red!45,-stealth](1, 3)--(1,4) node[anchor=south];
+            \draw[line width=1pt,red!45,-stealth](1, 3)--(4,3) node[anchor=south];
+
+%            \draw[dashed] (0,3)--(1,3);
+%            \draw[dashed] (1,0)--(1,3);
+%            \draw[dashed] (4,3)--(orig2);
+%            \draw[dashed] (1,4)--(orig2);
+
+
+            \pic [draw, -, "$\alpha$", angle eccentricity=1.5] {angle = a1--orig1--a2};
+            \pic [draw, -, "$\alpha$", angle eccentricity=1.5] {angle = b1--point--b2};
+
         \end{tikzpicture}
     \end{center}
+
+    Podemos observar por la descomposición en las componentes cartesianas de cada vector de campo eléctrico que el módulo
+    del campo total en la dirección $\mathbf{u}_y$ siempre es igual al campo en la dirección $\mathbf{u}_z$.
+
+
+
+    \vspace{20px}
+    \item Sea $d$ la distancia desde el centro de cualquiera de las dos esferas a un punto $P$ situado en el segmento AB.
+
+    Utilizando el principio de superposición lineal, podemos calcular el campo total en el punto $P$ con la suma de las contribuciones
+    al campo de cada esfera. Fijándonos en la figura del apartado anterior, podemos escribir:
+
+    \begin{equation*}
+        \mathbf{E} = \mathbf{E}_A + \mathbf{E}_B = \frac{\rho_0 d}{3 \varepsilon_0} (\cos\alpha \mathbf{u}_y + \sen\alpha \mathbf{u}_z)
+        + \frac{\rho_0 d}{3 \varepsilon_0} (\sen\alpha \mathbf{u}_y + \cos\alpha \mathbf{u}_z) =
+        \frac{\rho_0}{3 \varepsilon_0} d (\cos\alpha + \sen\alpha) (\mathbf{u}_y + \mathbf{u}_z)
+    \end{equation*}
+
+    Por la simetría del problema, sabemos que $d (\cos\alpha + \sen\alpha) = R$, así que la expresión del campo en cualquier punto
+    $P$ del segmento AB es:
+
+    \begin{equation*}
+        \mathbf{E} =  \frac{\rho_0 R}{3 \varepsilon_0} (\mathbf{u}_y + \mathbf{u}_z)
+    \end{equation*}
+
+    Este es un valor constante, que tiene como módulo $E = \frac{\sqrt{2}}{3} \frac{\rho_0 R}{\varepsilon_0}$, y la dirección del vector
+    unitario indicado en el apartado b).
 
 \end{enumerate}
