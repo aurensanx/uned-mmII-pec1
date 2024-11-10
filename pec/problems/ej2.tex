@@ -1,0 +1,171 @@
+\textbf{E2.} (3 puntos)
+
+
+\vspace{20px}
+\textit{Solución:}
+\\
+
+\begin{enumerate}
+[label=\alph*)]
+    \item La polarización \textbf{P} se define como el momento dipolar por unidad de volumen cuando dicho volumen es muy pequeño:
+
+    \begin{equation*}
+        \mathbf{P} = \lim_{\Delta v \rightarrow 0} \frac{\Delta \mathbf{p}}{\Delta v}
+    \end{equation*}
+
+    $\Delta \mathbf{p}$ es la suma vectorial de todos los momentos dipolares que existen en el volumen elemental $\Delta v$.
+    La relación anterior en forma diferencial para un elemento de volumen $dv^\prime$ se escribe como:
+
+    \begin{equation*}
+        d\mathbf{p} = \mathbf{P}(\mathbf{r}^\prime) dv^\prime
+    \end{equation*}
+
+    Si integramos la expresión anterior en el volumen de la esfera obtendremos el momento dipolar buscado.
+
+    \begin{equation*}
+        \mathbf{p} = \int_{V} \mathbf{P}(\mathbf{r}^\prime) dv^\prime
+        = \int_{V} P \mathbf{u}_z dv^\prime = \frac{4}{3} \pi a^3 P \mathbf{u}_z
+    \end{equation*}
+
+    \vspace{20px}
+    \item Como se muestra en el ejemplo 5.2, el campo \textbf{E} en cualquier punto interior de una esfera con polarización
+    $P \mathbf{u}_z $ es:
+
+    \begin{equation*}
+        \mathbf{E} = - \frac{P}{3 \varepsilon_0} \mathbf{u}_z
+    \end{equation*}
+
+    Esto tiene sentido físico, ya que si la polarización tiene sentido positivo en el eje $\mathbf{u}_z$, quiere decir
+    que cargas positivas se van acumulando en la parte superior de la esfera, y cargas negativas en la inferior.
+    El campo eléctrico siempre sigue la dirección de la acumulación de carga positivas a negativas.
+
+    El vector desplazamiento eléctrico \textbf{D} se puede obtener mediante la ecuación $\mathbf{D} = \varepsilon_0 \mathbf{E} + \mathbf{P}$.
+
+
+    \begin{equation*}
+        \mathbf{D} = \varepsilon_0 \biggl( - \frac{\mathbf{P}}{3\varepsilon_0} \biggr) + \mathbf{P} = \frac{2}{3} P \mathbf{u}_z
+    \end{equation*}
+
+    \vspace{20px}
+    \item
+    La ecuación 4.7 es una forma de expresar el campo debido a un dipolo eléctrico.
+
+    \begin{equation*}
+        \mathbf{E} = \frac{1}{4\pi\varepsilon_0} \frac{1} {r^3} \biggl(
+        \frac{3 (\mathbf{r} \cdot \mathbf{p})}{r^2} \mathbf{r} - \mathbf{p}
+        \biggr)
+    \end{equation*}
+
+    En coordenadas esféricas, $\mathbf{r} = r \mathbf{u}_r$, y aplicando la transformación
+    $\mathbf{u}_z = \mathbf{u}_r \cos \theta - \mathbf{u}_\theta \sen\theta$, el
+    momento dipolar calculado en el apartado a) se expresa como:
+
+    \begin{equation*}
+        \mathbf{p} = \frac{4}{3} \pi a^3 P (\cos\theta \mathbf{u}_r - \sen\theta \mathbf{u}_\theta )
+    \end{equation*}
+
+    Sutituyendo estos valores en la ecuación del campo eléctrico, llegamos a la ecuación:
+
+
+    \begin{equation*}
+        \mathbf{p} = \frac{4}{3} \pi a^3 P (\cos\theta \mathbf{u}_r - \sen\theta \mathbf{u}_\theta )
+    \end{equation*}
+
+    Insertando estas expresiones en la ecuación del campo eléctrico:
+
+    \begin{equation*}
+        \mathbf{r} \cdot \mathbf{p} = (r \mathbf{u}_r) \cdot
+        (\frac{4}{3} \pi a^3 P \mathbf{u}_z)
+        = \frac{4}{3} \pi a^3 r P ( \mathbf{u}_r \cdot \mathbf{u}_z ) =
+        \frac{4}{3} \pi a^3 r P \cos\theta
+    \end{equation*}
+
+    \begin{equation*}
+        \frac{3(   \mathbf{r} \cdot \mathbf{p} )} {r^2} \mathbf{r} =
+        4 \pi a^3 P \cos\theta  \mathbf{u}_r
+    \end{equation*}
+
+    \begin{equation*}
+        \biggl( \frac{3(   \mathbf{r} \cdot \mathbf{p} )} {r^2} \mathbf{r} - \mathbf{p} \biggr) =
+        \frac{4}{3} \pi a^3 P (
+        2\cos\theta  \mathbf{u}_r - \sen\theta  \mathbf{u}_\theta
+        )
+    \end{equation*}
+
+    \begin{equation*}
+        \mathbf{E} = \frac{a^3 P}{3 \varepsilon_0 r^3} (
+        2\cos\theta  \mathbf{u}_r - \sen\theta  \mathbf{u}_\theta
+        )
+    \end{equation*}
+
+    La última expresión es el campo eléctrico creado por el dipolo puntual para $r > a$. Solo tiene componentes radial y azimutal en
+    coordenadas esféricas ya que el dipolo está orientado a lo largo del eje Z en coordenadas cartesianas.
+
+    La condición de frontera para el campo eléctrico en la superficie de separación entre dos medios es la continuidad
+    de sus componentes tangenciales.
+
+    En $r = a$, la frontera de la esfera, tenemos que el campo calculado a partir del la ecuación del dipolo puntual es:
+    \begin{equation*}
+        \mathbf{E} = \frac{P}{3 \varepsilon_0} (
+        2\cos\theta  \mathbf{u}_r - \sen\theta  \mathbf{u}_\theta
+        )
+    \end{equation*}
+
+    La componente $\mathbf{u}_r$ es perpendicular a la superficie de la esfera y la componente $\mathbf{u}_\theta$ es tangencial, así
+    que para la condición de frontera solo nos interesa la contribución de la segunda.
+
+    Nos damos cuenta de que la componente tangencial del campo eléctrico que habíamos calculado en el apartado b)
+    para el interior de la esfera es la misma
+    que la componente tangencial para el campo externo que hemos calculado a partir del valor del momento dipolar:
+
+    \begin{equation*}
+        \mathbf{E} = - \frac{P \sen\theta}{3 \varepsilon_0} \mathbf{u}_\theta
+    \end{equation*}
+
+    Por todo ello, hemos demostrado que los campos eléctricos interior y exterior a la esfera cumplen la condición de frontera.
+
+
+    \vspace{20px}
+    \item
+
+    El material dieléctrico de la esfera es isótropo, homogéneo y lineal, así que la susceptibilidad $\chi$ no depende del campo
+    eléctrico ni del punto considerado.
+
+    Podemos escribir entonces la polarización a partir de su relación constitutiva con el campo eléctrico:
+
+    \begin{equation*}
+        \mathbf{P} = \varepsilon_0 \chi \mathbf{E} = \varepsilon_0 \chi E_0 \mathbf{u}_z
+    \end{equation*}
+
+    Utilizando el resultado del apartado b), sabemos que esta polarización crea un campo en el interior de la esfera igual a:
+
+    \begin{equation*}
+        \mathbf{E^\prime} = - \frac{P}{3 \varepsilon_0} = - \frac{\chi E_0}{3} \mathbf{u}_z
+    \end{equation*}
+
+    Sumando este campo eléctrico al que existía previamente a la introducción de la esfera, el campo \textbf{E} final dentro
+    de la esfera es:
+
+    \begin{equation*}
+        \mathbf{E} = E_0 \Bigl( 1 - \frac{\chi}{3} \Bigr) \mathbf{u}_z
+    \end{equation*}
+
+    El campo \textbf{D} se calcula como:
+
+    \begin{equation*}
+        \mathbf{D} = \varepsilon_0 \mathbf{E} + \mathbf{P} =
+        \varepsilon_0 E_0 \Bigl( 1 - \frac{\chi}{3} \Bigr) \mathbf{u}_z +  \varepsilon_0 E_0 \chi \mathbf{u}_z =
+        \varepsilon_0 E_0 \Bigl( 1 + \frac{2}{3} \chi \Bigr) \mathbf{u}_z
+    \end{equation*}
+
+
+    En el límite $\chi \simeq 0$ no existe polarización, independientemente del campo eléctrico que exista previamente.
+
+    En el límite $\chi \gg 0$, la polarización de la esfera compensa por completo el campo eléctrico previo en el interior de la esfera. Utlizando las
+    relaciones anteriores, el valor de la polarización para este caso sería:
+
+    \begin{equation*}
+        \mathbf{P} = 3 \varepsilon_0 E_0 \mathbf{u}_z
+    \end{equation*}
+
+\end{enumerate}
