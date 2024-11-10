@@ -1,0 +1,63 @@
+\textbf{Q3.} (0,5 puntos)
+
+
+\vspace{20px}
+\textit{Solución:}
+\\
+
+El campo eléctrico \textbf{E} en el interior del condensador cilíndrico solo tiene componente radial, y no es uniforme, siendo mayor
+cuanto más cerca nos encontremos del radio interior. Despreciamos los efectos de borde porque la altura del condensador es idealmente infinita.
+
+Podemos calcular el campo eléctrico en el espacio entre los dos conductores mediante el teorema de Gauss. A continuación, calculamos
+la expresión el potencial eléctrico $V_0$ a partir del campo $\mathbf{E}$.
+
+Sabiendo que $E_{m\acute ax} = 3 \times 10^6\;V / m$ para que no haya ruptura dieléctrica, podremos calcular el máximo potencial posible que se
+puede aplicar al condensador.
+
+Suponemos entonces que existe una carga $Q$ en el radio interior del condensador y una carga $-Q$ en el radio exterior. Si imaginamos una
+superficie de Gauss cilíndrica alrededor del radio interior del condensador y aplicamos la ley de Gauss, obtenemos:
+
+\begin{equation*}
+    \oint_{S} \mathbf{E} \cdot d\mathbf{s} = 2 \pi \rho h E_{\rho} = \frac{Q}{\varepsilon_0}
+    \hspace{10pt} \Rightarrow \hspace{10pt}  \mathbf{E} = \frac{Q}{2 \pi \varepsilon_0 h}\cdot \frac{1}{\rho} \mathbf{u}_{\rho}
+\end{equation*}
+
+Obtenemos ahora la expresión para el potencial eléctrico $V_0$.
+
+\begin{equation*}
+    V_0 = V_{a} - V_{b} = - \int_{b}^{a} \mathbf{E} \cdot d\mathbf{l} =
+    - \int_{b}^{a} \biggl( \frac{Q}{2 \pi \varepsilon_0 h}\cdot \frac{1}{\rho} \mathbf{u}_{\rho} \biggr) \cdot \mathbf{u}_{\rho} d\rho
+    =  \frac{Q}{2 \pi \varepsilon_0 h} \ln(\frac{b}{a})
+\end{equation*}
+
+Con estos dos resultados, obtenemos una relación entre $V_0$ y \textbf{E}.
+
+\begin{equation*}
+    \mathbf{E} = \frac{V_0}{ln(b/a)} \cdot \frac{1}{\rho} \mathbf{u}_{\rho}
+\end{equation*}
+
+
+La relación entre $V_0$, $a$ y $b$ que se nos pide en el enunciado es:
+
+\begin{equation*}
+    V_{0} < a\;\ln({\frac{b}{a}})\;E_{m \acute ax}
+\end{equation*}
+
+Esta inecuación tiene sentido físico si pensamos que el voltaje máximo permitido depende
+tanto del radio interior como exterior, lo que no debería sorprendernos. A su vez, si aumentamos el radio
+exterior $b$, el voltaje máximo aumenta. También nos damos cuenta de que si aumentamos el radio interior $a$ y mantenemos la misma
+separación con el radio exterior $b$, el voltaje máximo aumenta de nuevo. En esencia, lo que hemos hecho en ambos casos
+hipotéticos es aumentar
+el tamaño del condensador, que así soporta un mayor voltaje.
+
+Sustituyendo para los valores numéricos dados:
+
+\begin{equation*}
+    V_{0\;m\acute ax} = 5 \times 10^{-3}m \cdot \ln({\frac{7 \times 10^{-3}m}{5 \times 10^{-3}m}}) \cdot  3 \times 10^6\;V / m
+    = 5,047kV
+\end{equation*}
+
+Si se aplica al condensador un potencial mayor que $5,047kV$ se producirá la ruptura.
+
+
+
