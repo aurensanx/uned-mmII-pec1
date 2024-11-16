@@ -35,7 +35,122 @@
 
 
     \vspace{20px}
-    \item
+    \item Se nos dice en el enunciado que $Re[f(z)] = u(x,y)$. Podemos escribir por tanto la función compleja $f(z)$ como $f(z) = u(x,y) + iv(x,y)$,
+    donde tanto $u$ como $v$ son funciones reales.
+
+    Por otro lado, una función $f(z) = u(x,y) + iv(x,y)$ es analítica en un dominio $D$ si y solo si $v$ es conjugada
+    armónica de $u$. $v$ es conjugada armónica de $u$ en un dominio $D$
+    si ambas son funciones armónicas en $D$ y sus derivadas parciales de primer orden
+    satisfacen las ecuaciones de Cauchy-Riemann en $D$:
+
+    \begin{equation*}
+        u_x = v_y,\hspace{12pt} u_y = -v_x
+    \end{equation*}
+
+    Hemos verificado en el apartado a) que $u(x,y)$ era una función armónica en el dominio $A$, por lo que podemos utilizar las ecuaciones de
+    Cauchy-Riemann para calcular $v(x,y)$.
+
+    Comenzamos escribiendo:
+
+    \begin{equation*}
+       v_x = -u_y = \frac{2xy}{(x^2+ y^2)^2}
+    \end{equation*}
+
+    Integrando a cada lado con respecto a $x$:
+
+    \begin{equation*}
+        v(x,y) = - \frac{y}{x^2 + y^2} + \phi(y),
+    \end{equation*}
+
+    donde $\phi(y)$ es, por el momento, una función arbitraria de $y$. Utilizando la otra ecuación de Cauchy-Riemann tenemos que:
+
+    \begin{equation*}
+        1 + \frac{y^2 - x^2}{(x^2+y^2)^2} = - \frac{(x^2+y^2)-y2y}{(x^2+y^2)^2} + \phi^{\prime}(y) = \frac{y^2 - x^2}{(x^2+y^2)^2} + \phi^{\prime}(y),
+    \end{equation*}
+
+    por lo que $\phi(y) = y + C$, siendo $C$ una constante arbitraria real. Se puede escribir entonces $v(x,y)$ como:
+
+    \begin{equation*}
+       v(x,y) = y - \frac{y}{x^2+y^2} + C
+    \end{equation*}
+
+    Se puede ver fácilmente por simetría respecto a $u$ que $v$ también es armónica.
+
+    Hasta aquí, la función analítica correspondiente es:
+
+    \begin{equation*}
+        f(z) = x + \frac{x}{x^2+y^2} + i \Bigl(y - \frac{y}{x^2+y^2} + C\Bigr)
+    \end{equation*}
+
+    En este punto, aplicamos la segunda condición del enunciado, que nos dice que cuando $z=x$, $f(z)\,\epsilon\,\mathbb{R}$ o, equivalentemente,
+    $v(x,0) = 0$, por lo que $C = 0$ y:
+
+
+    \begin{equation*}
+        f(z) = x + \frac{x}{x^2+y^2} + i \Bigl(y - \frac{y}{x^2+y^2}\Bigr)
+    \end{equation*}
+
+    Debemos dar esta solución en términos de z, por lo que reordenando términos y operando:
+
+
+    \begin{equation*}
+        f(z) = x + i y + \frac{x - iy}{x^2+y^2} = z + \frac{\bar{z}}{z\bar{z}} = z + \frac{1}{z}.
+    \end{equation*}
+
+
+    \vspace{20px}
+    \item La curva $z = e^{it}$, con $\bigl(- \frac{\pi}{2} \leq t \leq 0 \bigr)$, en el plano $z$, es
+    el círculo unidad en el cuarto cuadrante, recorrido en sentido antihorario:
+
+    \begin{center}
+        \begin{tikzpicture}
+
+            \draw[-] (0,-2) -- (0,1) node[right]{$y$};
+            \draw[-] (-1,0) -- (2,0) node[above]{$x$};
+            \draw (0,0) circle (0pt) node[above left]{$O$};
+
+%            \draw ($(1,0)+(0,2.5pt)$) -- (1,0);
+            \node at ($(1,0)+(0,2ex)$) {1};
+
+%            \draw ($(0,-1)-(2.5pt,0)$) -- (0,-1);
+            \node at ($(0,-1)+(-2ex,0)$) {1};
+
+            \draw[ line width=0.25mm,
+                decoration={markings, mark=at position 0.625 with {\arrow[scale=1.5,>=stealth]{>}}},
+                postaction={decorate}
+            ]
+            (0,-1) arc[start angle=-90, end angle=0, radius=1];
+        \end{tikzpicture}
+    \end{center}
+
+    Debemos hallar y dibujar la imagen en el plano $w$ o plano $uv$ bajo la transformación $w= f(z) = z + \frac{1}{z}$.
+
+    Sustituyendo, llegamos a $w = 2 \cos{t} $, con $\bigl(- \frac{\pi}{2} \leq t \leq 0 \bigr)$, por lo que:
+
+    \begin{equation*}
+       u = 2 \cos{t},\hspace{12pt} v = 0
+    \end{equation*}
+
+    Vemos que la imagen de la transformación es una recta que coincide con el eje de abscisas, recorrida desde 0 hasta 2:
+
+
+    \begin{center}
+        \begin{tikzpicture}
+
+            \draw[-] (0,-1) -- (0,1) node[right]{$v$};
+            \draw[-] (-1,0) -- (3,0) node[above]{$u$};
+            \draw (0,0) circle (0pt) node[above left]{$O$};
+
+            \draw ($(2,0)+(0,2.5pt)$) -- (2,0);
+            \node at ($(2,0)+(0,2ex)$) {2};
+
+            \draw[-, line width=0.25mm,
+                decoration={markings, mark=at position 0.625 with {\arrow[scale=1.5,>=stealth]{>}}},
+                postaction={decorate}
+            ]
+            (0,0) -- (2,0)
+        \end{tikzpicture}
+    \end{center}
 
 
 \end{enumerate}
