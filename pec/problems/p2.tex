@@ -1,0 +1,45 @@
+\textbf{Problema 2.} (5 puntos)
+
+\vspace{20px}
+\textit{Solución:}
+\\
+
+\begin{enumerate}
+[label=\alph*)]
+    \item La función $f(z) = \sqrt[5]{z}$, en coordenadas polares, tiene la siguiente expresión:
+
+    \begin{equation*}
+        f(z) = \sqrt[5]{r} \exp{\Bigl[i\bigl(\frac{\theta}{5} + \frac{2k\pi}{5}\bigr)\Bigr]} \hspace{20pt} (k = 0,1,\mathellipsis,4),
+    \end{equation*}
+
+    a la que se ha podido llegar mediante la igualdad $\sqrt[5]{z} = \exp(\frac{1}{5} \log{z})$.
+
+    En este problema consideramos la determinación principal de la raíz, es decir, se sustituye $k = 0$ en la expresión anterior.
+    Que el corte sea a lo largo del eje $x$ negativo implica que $-\pi < \theta < \pi$. Puntos situados a lo largo del corte son
+    puntos singulares de la determinación principal de la raíz. Por todo ello, nuestra función queda:
+
+    \begin{equation*}
+        f(z) = \sqrt[5]{r} \exp{\Bigl(i\frac{\theta}{5}\Bigl)} \hspace{20pt} (-\pi < \theta < \pi)
+    \end{equation*}
+
+    Podemos demostrar que esta función $f(z) = u(r,\theta) + i v(r,\theta)$ es analítica
+    en su dominio demostrando que las derivadas parciales de $u$ y $v$ existen en su dominio y que satisfacen la forma polar
+    de las ecuaciones de Cauchy-Riemann:
+
+    \begin{equation*}
+        r u_r = v_\theta, \hspace{20pt} u_\theta = - r v_r
+    \end{equation*}
+
+    Como $u(r,\theta) = \sqrt[5]{r} \cos{\frac{\theta}{5}}$ y $v(r,\theta) = \sqrt[5]{r} \sen{\frac{\theta}{5}}$:
+
+    \begin{align*}
+        u_r  = & \;  \frac{1}{5} r^{-4/5} \cos{\frac{\theta}{5}} \\
+        v_\theta  = & \;  \frac{1}{5} r^{1/5} \cos{\frac{\theta}{5}} \\
+        u_\theta  = & \;  - \frac{1}{5} r^{1/5} \sen{\frac{\theta}{5}} \\
+        v_r  = & \;  \frac{1}{5} r^{-4/5} \sen{\frac{\theta}{5}} \\
+    \end{align*}
+
+    Por ello, las ecuaciones de Cauchy-Riemann se cumplen y hemos demostrado que $f(z)$ es analítica en su dominio.
+
+
+\end{enumerate}
