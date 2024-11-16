@@ -1,0 +1,41 @@
+\textbf{Problema 1.} (5 puntos)
+
+\vspace{20px}
+\textit{Solución:}
+\\
+
+\begin{enumerate}
+[label=\alph*)]
+    \item Una función real $H$, de variables reales $x$ e $y$, es armónica en un dominio dado del plano $xy$ si,
+    en todo el dominio,
+    tiene derivadas parciales continuas de primer y segundo orden que satisfacen la siguiente ecuación diferencial, conocida
+    como ecuación de Laplace:
+
+    \begin{equation*}
+        H_{xx}(x,y) + H_{yy}(x.y) = 0
+    \end{equation*}
+
+    La función $u$ del enunciado es derivable en A (plano $xy$ excepto el origen) porque la única singularidad de $U$ o sus
+    derivadas parciales es el origen.
+
+    Solo nos queda calcular las derivadas parciales $u_{xx}$ e $u_{yy}$ y comprobar que su suma es 0.
+
+    \begin{align*}
+        u_{x}(x,y) = & \;1 + \frac{x^2 + y^2 - 2x^2}{(x^2 + y^2)^2} = 1 + \frac{y^2 - x^2}{(x^2 + y^2)^2} \\[20pt]
+        u_{xx}(x,y) = & \;\frac{-2x(x^2 + y^2)^2 - (y^2 - x^2)2(x^2 + y^2)2x}{(x^2 + y^2)^4} =
+        \frac{-2x(x^2 + y^2) - 4x(y^2 - x^2)}{(x^2 + y^2)^3}  \\
+        = & \; \frac{-2x^3 -2xy -4xy^2 + 4x^3}{(x^2 + y^2)^3} =
+        \frac{2x^3 - 6xy^2}{(x^2 + y^2)^3} \\[20pt]
+        u_{y}(x,y) = & \; - \frac{2xy}{(x^2 + y^2)^2} \\[20pt]
+        u_{yy}(x,y) = & \; - \frac{2x(x^2 + y^2)^2 - 2xy2(x^2+y^2)2y}{(x^2 + y^2)^4}
+        = - \frac{2x(x^2 + y^2) - 8xy^2}{(x^2 + y^2)^3} = - \frac{2x^3 - 6xy^2}{(x^2+y^2)^3}
+    \end{align*}
+
+    Por lo tanto, $u_{xx}(x,y) + u_{yy}(x,y)$ es evidentemente $0$ y hemos verificado que $u(x,y)$ es armónica.
+
+
+    \vspace{20px}
+    \item
+
+
+\end{enumerate}
