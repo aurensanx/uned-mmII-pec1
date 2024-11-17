@@ -12,10 +12,10 @@
     como ecuación de Laplace:
 
     \begin{equation*}
-        H_{xx}(x,y) + H_{yy}(x.y) = 0
+        H_{xx}(x,y) + H_{yy}(x,y) = 0
     \end{equation*}
 
-    La función $u$ del enunciado es derivable en A (plano $xy$ excepto el origen) porque la única singularidad de $U$ o sus
+    La función $u$ del enunciado es derivable en $A$ (plano $xy$ excepto el origen) porque la única singularidad de $u$ o sus
     derivadas parciales es el origen.
 
     Solo nos queda calcular las derivadas parciales $u_{xx}$ e $u_{yy}$ y comprobar que su suma es 0.
@@ -35,10 +35,11 @@
 
 
     \vspace{20px}
-    \item Se nos dice en el enunciado que $Re[f(z)] = u(x,y)$. Podemos escribir por tanto la función compleja $f(z)$ como $f(z) = u(x,y) + iv(x,y)$,
+    \item Se nos dice en el enunciado que $Re[f(z)] = u(x,y)$. Podemos escribir entonces
+    la función compleja $f(z)$ como $f(z) = u(x,y) + i\,v(x,y)$,
     donde tanto $u$ como $v$ son funciones reales.
 
-    Por otro lado, una función $f(z) = u(x,y) + iv(x,y)$ es analítica en un dominio $D$ si y solo si $v$ es conjugada
+    Por otro lado, una función $f(z) = u(x,y) + i\,v(x,y)$ es analítica en un dominio $D$ si y solo si $v$ es conjugada
     armónica de $u$. $v$ es conjugada armónica de $u$ en un dominio $D$
     si ambas son funciones armónicas en $D$ y sus derivadas parciales de primer orden
     satisfacen las ecuaciones de Cauchy-Riemann en $D$:
@@ -53,7 +54,7 @@
     Comenzamos escribiendo:
 
     \begin{equation*}
-       v_x = -u_y = \frac{2xy}{(x^2+ y^2)^2}
+        v_x = -u_y = \frac{2xy}{(x^2+ y^2)^2}
     \end{equation*}
 
     Integrando a cada lado con respecto a $x$:
@@ -71,7 +72,7 @@
     por lo que $\phi(y) = y + C$, siendo $C$ una constante arbitraria real. Se puede escribir entonces $v(x,y)$ como:
 
     \begin{equation*}
-       v(x,y) = y - \frac{y}{x^2+y^2} + C
+        v(x,y) = y - \frac{y}{x^2+y^2} + C
     \end{equation*}
 
     Se puede ver fácilmente por simetría respecto a $u$ que $v$ también es armónica.
@@ -125,10 +126,10 @@
 
     Debemos hallar y dibujar la imagen en el plano $w$ o plano $uv$ bajo la transformación $w= f(z) = z + \frac{1}{z}$.
 
-    Sustituyendo, llegamos a $w = 2 \cos{t} $, con $\bigl(- \frac{\pi}{2} \leq t \leq 0 \bigr)$, por lo que:
+    Sustituyendo $z = e^{it}$ en $w = f(z)$, llegamos a $w = 2 \cos{t} $, con $\bigl(- \frac{\pi}{2} \leq t \leq 0 \bigr)$, por lo que:
 
     \begin{equation*}
-       u = 2 \cos{t},\hspace{12pt} v = 0
+        u = 2 \cos{t},\hspace{12pt} v = 0
     \end{equation*}
 
     Vemos que la imagen de la transformación es una recta que coincide con el eje de abscisas, recorrida desde 0 hasta 2:

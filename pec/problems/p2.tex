@@ -71,10 +71,10 @@
     A continuación, consideramos la rama:
 
     \begin{equation*}
-        f_2(z) = \sqrt[5]{r} e^{i\frac{\theta}{5}}, \hspace{12pt} (r> 0, \frac{-\pi}{2} < \theta < \frac{3\pi}{2})
+        f_2(z) = \sqrt[5]{r} e^{i\frac{\theta}{5}}, \hspace{12pt} (r> 0, - \frac{\pi}{2} < \theta < \frac{3\pi}{2})
     \end{equation*}
 
-    Evaluamos esta vez la integral de esta rama a lo largo de cualquier contorno $C_2$ que vaya desde $z = -1$ hasta $z = 1$ y que,
+    Esta vez, evaluamos la integral de esta rama a lo largo de cualquier contorno $C_2$ que vaya desde $z = -1$ hasta $z = 1$ y que,
     salvo sus extremos, esté situado por encima del eje real.
 
     \begin{equation*}
@@ -82,7 +82,7 @@
         \frac{5}{6}\Bigl(e^{i0} - e^{i\frac{6\pi}{5}} \Bigr)
     \end{equation*}
 
-    Como queremos recorrer $C$ en sentido antihorario, la integral final que buscamos se calcular haciendo $C_1 - C_2$:
+    Como queremos recorrer $C$ en sentido antihorario, la integral final que buscamos se calcula evaluando $C_1 - C_2$:
 
     \begin{equation*}
         \int_{C} f(z) dz = \frac{5}{6} \Bigl( e^{i\frac{2\pi}{5}} -1 \Bigr) =
@@ -94,11 +94,14 @@
     En este punto, en el enunciado se nos pide aplicar el teorema de Cauchy-Goursat para calcular la integral de $f(z)$
     y comprobar que sale el mismo resultado.
 
-    Sin embargo, el teorema de Cauchy-Goursat no se puede aplicar porque $f(z)$ no es analítica en el origen, y ni siquiera está
+    Sin embargo, el teorema de Cauchy-Goursat no se puede aplicar con estas condiciones
+    porque $f(z)$ no es analítica en el origen, y ni siquiera está
     definida en el eje real negativo.
 
-    Tampoco se puede aplicar teoría de residuos, porque para ello los puntos singulares interiores a $C$ deberían
-    ser finitos en número y singulares aislados. No cumplen ninguna de las dos condiciones.
+    Tampoco se puede trazar un contorno $C$ que bordee el corte de la rama y hacer una elección de $f(z)$ uniforme o unívoca.
+
+    Por último, no se puede aplicar teoría de residuos, porque para ello los puntos singulares interiores a $C$ deberían
+    ser finitos en número y singulares aislados. Los puntos del corte de rama no cumplen ninguna de las dos condiciones.
 
 
 \end{enumerate}
