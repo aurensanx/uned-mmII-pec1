@@ -6,21 +6,16 @@
 
 \begin{enumerate}
 [label=\alph*)]
-    \item La función $f(z) = \sqrt[5]{z}$, en coordenadas polares, tiene la siguiente expresión:
+    \item La función $f(z) = \sqrt[5]{z}$, en coordenadas polares, con corte a lo largo del eje $x$ negativo, tiene la siguiente expresión:
 
     \begin{equation*}
-        f(z) = \sqrt[5]{r} \exp{\Bigl[i\bigl(\frac{\theta}{5} + \frac{2k\pi}{5}\bigr)\Bigr]} \hspace{20pt} (k = 0,1,\mathellipsis,4),
+        f(z) = \sqrt[5]{r} \exp{\Bigl(i\frac{\theta}{5}\Bigl)} \hspace{20pt} (r > 0, -\pi < \theta < \pi),
     \end{equation*}
 
     a la que se ha podido llegar mediante la igualdad $\sqrt[5]{z} = \exp(\frac{1}{5} \log{z})$.
 
-    En este problema consideramos la determinación principal de la raíz, es decir, se sustituye $k = 0$ en la expresión anterior.
-    Que el corte sea a lo largo del eje $x$ negativo implica que $-\pi < \theta < \pi$. Puntos situados a lo largo del corte son
-    puntos singulares de la determinación principal de la raíz. Por todo ello, nuestra función queda:
-
-    \begin{equation*}
-        f(z) = \sqrt[5]{r} \exp{\Bigl(i\frac{\theta}{5}\Bigl)} \hspace{20pt} (-\pi < \theta < \pi)
-    \end{equation*}
+    Cabe remarcar que los puntos situados a lo largo del corte son
+    puntos singulares, en los que $f(z)$ no está definida.
 
     Podemos demostrar que esta función $f(z) = u(r,\theta) + i v(r,\theta)$ es analítica
     en su dominio demostrando que las derivadas parciales de $u$ y $v$ existen en su dominio y que satisfacen la forma polar
@@ -40,6 +35,70 @@
     \end{align*}
 
     Por ello, las ecuaciones de Cauchy-Riemann se cumplen y hemos demostrado que $f(z)$ es analítica en su dominio.
+
+
+    \vspace{20px}
+    \item Comenzamos calculando una primitiva.
+
+    Sabemos que si una función $f(z)$ es continua en un dominio $D$, y si a su vez se puede calcular una primitiva $F(z)$ en $D$,
+    esto implica que las integrales de $f(z)$, a lo largo de contornos contenidos enteramente en $D$, y extendiendo de cualquier punto
+    fijo $z_1$ a otro punto fijo $z_2$, tienen todas el mismo valor, independientemente del contorno recorrido:
+
+    \begin{equation*}
+        \int_{z_1}^{z_2} f(z)dz = F(z_2) - F(z_1)
+    \end{equation*}
+
+    Nos damos cuenta también de que una primitiva $F(z)$ de la determinación principal de la raíz $\sqrt[5]{z}$ no es diferenciable,
+    ni siquiera está definida a lo largo del corte, por lo que el contorno $C$ no está contenido en ningún dominio donde
+    esa posible primitiva cumpla $F^\prime(z) = \sqrt[5]{z}$.
+
+    Por todo ello, debemos usar una combinación de dos primitivas para calcular la integral de $f(z)$ a lo largo de $C$.
+
+    Consideramos primero la rama:
+
+    \begin{equation*}
+        f_1(z) = \sqrt[5]{r} e^{i\frac{\theta}{5}}, \hspace{12pt} (r> 0, \frac{\pi}{2} < \theta < \frac{5\pi}{2})
+    \end{equation*}
+
+    Evaluamos la integral de esta rama a lo largo de cualquier contorno $C_1$ que vaya desde $z = -1$ hasta $z = 1$ que,
+    salvo sus extremos, esté situado por debajo del eje real.
+
+    \begin{equation*}
+        \int_{C_1} f_1(z) dz = \frac{5}{6} r^{\frac{6}{5}} e^{i\frac{6\theta}{5}} \Big|_\pi^{2\pi} =
+        \frac{5}{6}\Bigl(e^{i\frac{12\pi}{5}} - e^{i\frac{6\pi}{5}} \Bigr)
+    \end{equation*}
+
+    A continuación, consideramos la rama:
+
+    \begin{equation*}
+        f_2(z) = \sqrt[5]{r} e^{i\frac{\theta}{5}}, \hspace{12pt} (r> 0, \frac{-\pi}{2} < \theta < \frac{3\pi}{2})
+    \end{equation*}
+
+    Evaluamos esta vez la integral de esta rama a lo largo de cualquier contorno $C_2$ que vaya desde $z = -1$ hasta $z = 1$ y que,
+    salvo sus extremos, esté situado por encima del eje real.
+
+    \begin{equation*}
+        \int_{C_2} f_2(z) dz = \frac{5}{6} r^{\frac{6}{5}} e^{i\frac{6\theta}{5}} \Big|_\pi^{0} =
+        \frac{5}{6}\Bigl(e^{i0} - e^{i\frac{6\pi}{5}} \Bigr)
+    \end{equation*}
+
+    Como queremos recorrer $C$ en sentido antihorario, la integral final que buscamos se calcular haciendo $C_1 - C_2$:
+
+    \begin{equation*}
+        \int_{C} f(z) dz = \frac{5}{6} \Bigl( e^{i\frac{2\pi}{5}} -1 \Bigr) =
+        \frac{5}{6} \Bigl(  \cos{\frac{2\pi}{5}} - 1 + i \sen{\frac{2\pi}{5}} \Bigr)
+    \end{equation*}
+
+
+    \vspace{20px}
+    En este punto, en el enunciado se nos pide aplicar el teorema de Cauchy-Goursat para calcular la integral de $f(z)$
+    y comprobar que sale el mismo resultado.
+
+    Sin embargo, el teorema de Cauchy-Goursat no se puede aplicar porque $f(z)$ no es analítica en el origen, y ni siquiera está
+    definida en el eje real negativo.
+
+    Tampoco se puede aplicar teoría de residuos, porque para ello los puntos singulares interiores a $C$ deberían
+    ser finitos en número y singulares aislados. No cumplen ninguna de las dos condiciones.
 
 
 \end{enumerate}
